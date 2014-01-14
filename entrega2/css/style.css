@@ -1,0 +1,63 @@
+body {
+  font-family: "Times New Roman", Georgia, Serif;
+  background-image: url('../images/fondo.png');
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #4D4E53;
+}
+
+a:link {
+  color: #FFFFFF;
+}
+a:visited {
+  color: #FFFFFF;
+}
+a:hover {
+  color: #FFFFFF;
+}
+a:active {
+  color: #FFFFFF;
+}
+
+h1 {
+  background-color: #E66000;
+  color: #FFFFFF;
+}
+
+ul {
+
+}
+
+li {
+
+}
+
+p {
+  color: #FFFFFF;
+}
+
+.section ol {
+  color: #064A8D;
+}
+
+.section b {
+  color: #000;
+}
+
+.section i {
+  color: #483d8b;
+}
+
+.section em {
+  font-style: normal;
+  color: #000;
+}
+
+.piece {
+  font-weight: bolder;
+  color: black;
+}

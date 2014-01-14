@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "name": "GeoRoutes",
+  "description": "Geolocalización y Rutas",
+  "launch_path": "/host/0Bzj7vifGOb3KOWJCeXZTc1Y4M1E/entrega5/hosted/georoutes.htm",
+  "icons": {
+    "16":  "/host/0Bzj7vifGOb3KOWJCeXZTc1Y4M1E/entrega5/hosted/ico_16.png",
+    "48":  "/host/0Bzj7vifGOb3KOWJCeXZTc1Y4M1E/entrega5/hosted/ico_48.png",
+    "128": "/host/0Bzj7vifGOb3KOWJCeXZTc1Y4M1E/entrega5/hosted/ico_128.png"
+  },
+  "permissions": {
+   "geolocation": {
+     "description": "Obtención de la posición actual del usuario."
+   },
+   "storage": {
+     "description": "Para almacenamiento de rutas previas."
+   }
+  },
+  "developer": {
+    "name": "Paulo Clavijo",
+    "url": "https://www.miriadax.net/web/firefox-os"
+  }
+}

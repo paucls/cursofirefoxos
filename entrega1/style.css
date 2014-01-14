@@ -1,0 +1,29 @@
+body {
+  font-family: "Times New Roman", Georgia, Serif;
+}
+
+p {
+  color: #282828;
+}
+
+.section ol {
+  color: #064A8D;
+}
+
+.section b {
+  color: #000;
+}
+
+.section i {
+  color: #483d8b;
+}
+
+.section em {
+  font-style: normal;
+  color: #000;
+}
+
+.piece {
+  font-weight: bolder;
+  color: black;
+}

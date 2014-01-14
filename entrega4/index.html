@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head><title>Cronómetro</title><meta charset="UTF-8">
+<script type="text/javascript" src="zepto.min.js"></script>
+<script type="text/javascript" src="touch.js"></script>
+<script type="text/javascript">
+  $(function(){
+    localStorage.c = (localStorage.c || "0.0");
+    localStorage.stops = (localStorage.stops || "");
+
+    var t, cl = $("#crono"), stopsList = $("#stopsList");
+
+    function incr() {
+        localStorage.c = +localStorage.c + 0.01;
+    }
+    function mostrar() {
+        cl.html((+localStorage.c).toFixed(2));
+        stopsList.html(localStorage.stops);
+    }
+    function arrancar() {
+        t = setInterval(function() { incr(); mostrar() }, 10);
+    }
+    function parar() {
+        clearInterval(t);
+        t = undefined;
+
+        localStorage.stops += "<li>" + ((+localStorage.c).toFixed(2) + " segundos</li>");
+        mostrar();
+    }
+    function cambiar() {
+        if (!t) arrancar(); else parar(); 
+    }
+    function inicializar() {
+        if (!t) {
+            localStorage.c = "0.0";
+            localStorage.stops = "";
+            mostrar();
+        }
+    }
+
+    $("#cambiar").on('click', cambiar);
+    $("#inicializar").on('click', inicializar);
+    $("body").on('tap', cambiar);
+    $("body").on('swipe', inicializar);
+
+    mostrar();
+  });
+</script>
+</head>
+<body>
+    <h2>Cronómetro</h2>
+
+    <h3><span id="crono"> 0.0 </span> segundos </h3>
+
+    <button type="button" id="cambiar"> arrancar/parar </button>
+    <button type="button" id="inicializar">  inicializar </button>
+
+    <ol id="stopsList"></ol>
+</body>
+</html>
